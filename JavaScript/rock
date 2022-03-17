@@ -1,0 +1,44 @@
+//function for the game
+function rockPaperScissors(input) {
+ if (input === "rock"||'paper'||'scissors'){
+    return input;
+   }
+console.log(rockPaperScissors('scissors'))
+}
+// Generate a number between 0 and 2, including 2
+function cpuRandom(r) {
+    return Math.floor(Math.random() * r) + 1;
+}
+cpuRandom(2);
+if ( cpuRandom === 0) {
+    cpuRandom = 'rock'
+  }else
+    if (cpuRandom === 1) {
+      cpuRandom = 'paper';
+    }else
+    if (cpuRandom === 2) {
+      cpuRandom = 'scissors';
+    }
+  function winner(rockPaperScissors,cpuRandom) {
+    rockPaperScissors === cpuRandom;
+    if (rock === scissors){
+      return true;
+    }else
+      if (scissors === paper){
+        return true;
+      }else
+        if (paper === rock) {
+          return true;
+        }else
+          return false;
+  }
+ console.log(winner(rockPaperScissors,cpuRandom))
+  if (winner === rockPaperScissors){
+    return `You win! I chose (${cpuRandom})`;
+  }else
+    if (winner === cpuRandom){
+      return `You lose! I chose (${cpuRandom})`;
+    }else
+    {
+      return 'I do not understand. Try entering rock, paper, or scissors';
+    }

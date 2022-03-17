@@ -1,0 +1,54 @@
+//player choice
+    let myGuess = prompt("What is your choice of weapon: rock, paper, or scissors?");
+    
+    //Computer Choice
+    let cpuChoice = Math.ceil(Math.random() *3);
+    
+    //variables as numbers
+    if (cpuChoice < 1) {
+        cpuChoice = "rock";
+    } else if(1 <= cpuChoice <= 2) {
+        cpuChoice = "paper";
+    } else {
+        cpuChoice = "scissors";
+    }
+    
+    
+    //defining function
+    function game(myGuess, cpuChoice){
+    
+    //Checking for a tie
+    if (myGuess === cpuChoice) {
+          return "It is a tie";
+        }
+    
+        //Check for Rock
+        if (myGuess === "rock") {
+          if (cpuChoice === "scissors") {
+            return "Player Wins";
+          } else {
+            return "Computer Wins";
+          }
+        }
+        //Check for Paper
+        if (myGuess  === "paper") {
+          if (cpuChoice === "scissors") {
+            return "Computer Wins";
+          } else {
+            return "Player Wins";
+          }
+        }
+        //Check for Scissors
+        if (myGuess === "scissors") {
+          if (cpuChoice === "rock") {
+            return "Computer Wins";
+          } else {
+                    return "Player Wins";
+          }
+        }
+    }
+    
+    //start the game function
+    game();
+    //print winner
+    console.log(game(myGuess, cpuChoice))
